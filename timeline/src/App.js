@@ -15,8 +15,6 @@ const App = () => {
   // taking first item for the first time
   const date = new Date(data[0].start_time * 1000);
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  // const day = days[date.getDay()];
-  // console.log(date.getDate(), day);
   const selectedDay = date.getDate();
   // -------------------------------------------------
   const currentsDaysEvent = [];
@@ -29,7 +27,7 @@ const App = () => {
     });
   };
   getEventsOfTheDay();
-  console.log(currentsDaysEvent);
+  // console.log(currentsDaysEvent);
   // -------------------------------------------
   const dateList = new Set(); // got unique Dates.
   const getDateList = () => {
@@ -39,16 +37,27 @@ const App = () => {
       const day = date.getDay();
       dateList.add(days[day] + " " + newDate);
     });
-    console.log(dateList);
+    // console.log(dateList);
   };
   getDateList();
   // ---------------------------------------------
+  const typesSet = new Set();
+  const getTypes = () => {
+    data.forEach((item) => {
+      typesSet.add(item.type);
+    });
+  };
+  getTypes();
+  console.log(typesSet);
   return (
     <ChakraProvider>
       <Box>
         <Navbar />
         <Sidebar dateList={dateList} />
-        <Timelinehome />
+        <Timelinehome
+          currentsDaysEvent={currentsDaysEvent}
+          typesSet={typesSet}
+        />
       </Box>
     </ChakraProvider>
   );

@@ -2,7 +2,8 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import Timeline from "./Timeline";
 import Cls from "./Cls";
-function Timelinehome() {
+const Timelinehome = ({ currentsDaysEvent, typesSet }) => {
+  // console.log(currentsDaysEvent, [...typesSet]);
   return (
     <Box
     // pos={"absolute"}
@@ -26,7 +27,7 @@ function Timelinehome() {
         borderRadius={5}
       >
         <Timeline />
-        <Box >
+        <Box>
           <Box mb={"76px"}>
             <Cls />
           </Box>
@@ -43,6 +44,6 @@ function Timelinehome() {
       </Box>
     </Box>
   );
-}
+};
 
 export default Timelinehome;
