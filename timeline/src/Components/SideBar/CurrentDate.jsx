@@ -2,11 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 
 const CurrentDate = ({ item }) => {
-  //   console.log(item.start_time);
-  const date = new Date(item.start_time * 1000);
 
-  //   console.log(date.getDate(), date.getMonth(), date.getFullYear());
-  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   return (
     <Box
       display={"flex"}
