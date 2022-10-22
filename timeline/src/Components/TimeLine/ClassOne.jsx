@@ -1,7 +1,7 @@
 import React from "react";
-import { Stack, HStack, Box, Text, VStack, Center } from "@chakra-ui/react";
+import { HStack, Box } from "@chakra-ui/react";
 const ClassOne = ({ stime }) => {
-  var width = 200;
+  var width = 264;
   var decimal = (stime + "").split(".")[1] ? (stime + "").split(".")[1] : 0;
   stime = Math.floor(stime);
   console.log(decimal, stime);
@@ -12,10 +12,10 @@ const ClassOne = ({ stime }) => {
   }
 
   return (
-    <HStack spacing="24px">
+    <HStack spacing="24px" bg={"red"}>
       <Box
         w={newWidth ? newWidth : 150}
-        // w={width}
+        h={73}
         pos={"absolute"}
         // stime * width + 24 * stime
         left={
@@ -23,10 +23,10 @@ const ClassOne = ({ stime }) => {
             ? onecandle * decimal
             : stime * width + 24 * stime + decimal * onecandle
         }
-        h="40px"
+        // h="40px"
         bg="yellow.200"
       >
-        <Box display={"flex"} mt={1}>
+        <Box display={"flex"} alignItems="center" >
           {stime}
         </Box>
       </Box>

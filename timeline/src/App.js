@@ -1,17 +1,24 @@
-import "./App.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import TimeLine from "./Components/TimeLine";
-import Cls from "./Components/Cls";
-import { Stack, HStack, VStack, Box } from "@chakra-ui/react";
-
+// import TimeLine from "./Components/TimeLine";
+// import Cls from "./Components/Cls";
+import { Box } from "@chakra-ui/react";
+import Navbar from "./Components/NavBar/Navbar";
+import Sidebar from "./Components/SideBar/Sidebar";
+import Timelinehome from "./Components/TimeLine/TimelineHome";
 function App() {
   return (
     <ChakraProvider>
-      <Box h={100}>
+      <Box>
+        <Sidebar />
+        <Navbar />
+        <Timelinehome />
+        {/* <Content/> */}
+        {/* <Box>
         <TimeLine />
         <Box>
-          <Cls />
+        <Cls />
         </Box>
+      </Box> */}
       </Box>
     </ChakraProvider>
   );
