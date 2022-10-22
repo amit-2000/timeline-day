@@ -51,7 +51,7 @@ const App = () => {
   console.log(typesSet);
   return (
     <ChakraProvider>
-      <Box>
+      <Box >
         <Navbar />
         <Sidebar dateList={dateList} />
         <Timelinehome

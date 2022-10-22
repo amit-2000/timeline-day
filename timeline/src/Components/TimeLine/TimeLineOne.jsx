@@ -6,7 +6,7 @@ const TimeLineOne = ({ time }) => {
     <HStack>
       {/* bg="yellow.200" */}
       <Box w={width}>
-        <Box display={"flex"} mt={1}>
+        <Box display={"flex"} mt={1} >
           <Text w={width / 4}>{time}</Text>
           <Text w={width / 4} fontSize={13}>
             |

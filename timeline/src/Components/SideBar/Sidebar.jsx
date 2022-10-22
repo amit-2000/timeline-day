@@ -15,7 +15,7 @@ const Sidebar = ({ dateList }) => {
       top={"112px"}
       backgroundColor="#FFFFFF"
       borderRadius={5}
-      bg="green"
+     
     >
       <Box
         display={"flex"}

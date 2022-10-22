@@ -5,12 +5,12 @@ function Navbar() {
   return (
     <Box
       pos={"absolute"}
-      width={1329}
+      width={1250}
       h={"60px"}
       top={47}
-      left={20}
-      //   backgroundColor={"#FFFFFF"}
-        backgroundColor={"red"}
+      left={15}
+        backgroundColor={"#FFFFFF"}
+       
       borderRadius={5}
     >
       <Box
@@ -39,7 +39,7 @@ function Navbar() {
           position: "absolute",
           width: "27px",
           height: "25px",
-          left: "1100px",
+          left: "1160px",
           top: 18,
           h: 29,
           background: " #F4F4F4",
@@ -59,7 +59,7 @@ function Navbar() {
           position: "absolute",
           width: "27px",
           height: "25px",
-          left: "1155px",
+          left: "1200px",
           top: 18,
           h: 29,
           background: " #F4F4F4",

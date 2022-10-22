@@ -14,15 +14,14 @@ const ClassOne = ({ stime }) => {
   return (
     <HStack spacing="24px" bg={"red"}>
       <Box
-        w={newWidth ? newWidth : 150}
+        w={newWidth ? newWidth : width}
         h={73}
-      
         pos={"absolute"}
         // stime * width + 24 * stime
         left={
           newWidth
             ? onecandle * decimal
-            : stime * width + 24 * stime + decimal * onecandle
+            : stime * width + 2 * stime + decimal * onecandle
         }
         // h="40px"
         bg="yellow.200"
