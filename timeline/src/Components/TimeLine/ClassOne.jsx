@@ -16,6 +16,7 @@ const ClassOne = ({ stime }) => {
       <Box
         w={newWidth ? newWidth : 150}
         h={73}
+      
         pos={"absolute"}
         // stime * width + 24 * stime
         left={
@@ -26,7 +27,7 @@ const ClassOne = ({ stime }) => {
         // h="40px"
         bg="yellow.200"
       >
-        <Box display={"flex"} alignItems="center" >
+        <Box display={"flex"} alignItems="center">
           {stime}
         </Box>
       </Box>

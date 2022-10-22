@@ -1,7 +1,8 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
+import CurrentDate from "./CurrentDate";
 
-function Sidebar() {
+const Sidebar = ({ data }) => {
   return (
     <Box
       boxSizing="border-box"
@@ -20,21 +21,33 @@ function Sidebar() {
         flexDirection="row"
         justifyContent={"center"}
         alignItems={"center"}
-        padding={1}
-        gap={1}
+        // padding={1}
+        // gap={1}
         position={"absolute"}
-        w={"90px"}
-        h="55px"
+        w={"100px"}
+        h="59px"
         // left={"6px"}
-        left={"15px"}
+        left={"6px"}
         top={1}
         backgroundColor={"#F4F4F4"}
         borderRadius={"5px"}
       >
         {"<>"}
       </Box>
+      <Box
+        display={"flex"}
+        flexDirection="column"
+        justifyContent={"center"}
+        alignItems={"center"}
+        position="relative"
+        top={"68px"}
+      >
+        {data.map((item) => {
+          return <CurrentDate item={item} />;
+        })}
+      </Box>
     </Box>
   );
-}
+};
 
 export default Sidebar;

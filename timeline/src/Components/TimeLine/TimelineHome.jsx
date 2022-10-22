@@ -5,14 +5,14 @@ import Cls from "./Cls";
 function Timelinehome() {
   return (
     <Box
-      // pos={"absolute"}
-      // w={1212}
-      // scro
-      // // h={609}
-      // left={137}
-      // top={112}
-      // backgroundColor={"#FFFFFF"}
-      // borderRadius={5}
+    // pos={"absolute"}
+    // w={1212}
+    // scro
+    // // h={609}
+    // left={137}
+    // top={112}
+    // backgroundColor={"#FFFFFF"}
+    // borderRadius={5}
     >
       <Box
         overflowX="scroll"
@@ -26,7 +26,20 @@ function Timelinehome() {
         borderRadius={5}
       >
         <Timeline />
-        <Cls />
+        <Box >
+          <Box mb={"76px"}>
+            <Cls />
+          </Box>
+          <Box mb={"76px"}>
+            <Cls />
+          </Box>
+          <Box mb={"76px"}>
+            <Cls />
+          </Box>
+          <Box mb={"76px"}>
+            <Cls />
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
