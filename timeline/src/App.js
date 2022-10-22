@@ -1,8 +1,6 @@
+import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-// import TimeLine from "./Components/TimeLine";
-// import Cls from "./Components/Cls";
 import { Box } from "@chakra-ui/react";
-// import { useState } from "react";
 import Navbar from "./Components/NavBar/Navbar";
 import Sidebar from "./Components/SideBar/Sidebar";
 import Timelinehome from "./Components/TimeLine/TimelineHome";
@@ -14,12 +12,43 @@ const App = () => {
   // });
   // const [currentSchedule, setCurrentSchedule] = useState(data[0]);
   // const handleDate()
+  // taking first item for the first time
+  const date = new Date(data[0].start_time * 1000);
+  const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  // const day = days[date.getDay()];
+  // console.log(date.getDate(), day);
+  const selectedDay = date.getDate();
+  // -------------------------------------------------
+  const currentsDaysEvent = [];
+  const getEventsOfTheDay = () => {
+    data.forEach((item) => {
+      const date = new Date(item.start_time * 1000);
+      if (selectedDay === date.getDate()) {
+        currentsDaysEvent.push(item);
+      }
+    });
+  };
+  getEventsOfTheDay();
+  console.log(currentsDaysEvent);
+  // -------------------------------------------
+  const dateList = new Set(); // got unique Dates.
+  const getDateList = () => {
+    data.forEach((item) => {
+      const date = new Date(item.start_time * 1000);
+      const newDate = date.getDate();
+      const day = date.getDay();
+      dateList.add(days[day] + " " + newDate);
+    });
+    console.log(dateList);
+  };
+  getDateList();
+  // ---------------------------------------------
   return (
     <ChakraProvider>
       <Box>
         <Navbar />
-        <Sidebar data={data} />
-        <Timelinehome  />
+        <Sidebar dateList={dateList} />
+        <Timelinehome />
       </Box>
     </ChakraProvider>
   );

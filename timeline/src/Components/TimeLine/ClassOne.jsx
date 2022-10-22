@@ -4,7 +4,7 @@ const ClassOne = ({ stime }) => {
   var width = 264;
   var decimal = (stime + "").split(".")[1] ? (stime + "").split(".")[1] : 0;
   stime = Math.floor(stime);
-  console.log(decimal, stime);
+  // console.log(decimal, stime);
   var onecandle = width / 60;
   var newWidth = 0;
   if (stime === 0.3) {
