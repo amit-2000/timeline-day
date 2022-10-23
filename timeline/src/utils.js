@@ -1,3 +1,11 @@
+// var date = new Date(item.start_time * 1000);
+// var start_hour = date.getHours();
+// var start_minute = date.getMinutes();
+// var date_end = new Date(item.end_time * 1000);
+// var end_hour = date_end.getHours();
+// var end_minute = date_end.getMinutes();
+// console.log(start_hour, ":", start_minute, end_hour, ":", end_minute);
+
 export const data = [
   {
     id: "8db10820-5f41-4460-bed6-14222e2f24bb",

@@ -31,6 +31,7 @@ const Timelinehome = ({ currentsDaysEvent, typesSet }) => {
         <Box>
           <Cls currentsDaysEvent={currentsDaysEvent} />
         </Box>
+        
       </Box>
     </Box>
   );
