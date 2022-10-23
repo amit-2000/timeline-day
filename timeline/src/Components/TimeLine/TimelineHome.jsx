@@ -1,9 +1,10 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, HStack } from "@chakra-ui/react";
 import Timeline from "./Timeline";
 import Cls from "./Cls";
 const Timelinehome = ({ currentsDaysEvent, typesSet }) => {
   // console.log(currentsDaysEvent, [...typesSet]);
+
   return (
     <Box
     // pos={"absolute"}
@@ -28,18 +29,7 @@ const Timelinehome = ({ currentsDaysEvent, typesSet }) => {
       >
         <Timeline />
         <Box>
-          <Box mb={"76px"}>
-            <Cls />
-          </Box>
-          <Box mb={"76px"}>
-            <Cls />
-          </Box>
-          <Box mb={"76px"}>
-            <Cls />
-          </Box>
-          <Box mb={"76px"}>
-            <Cls />
-          </Box>
+          <Cls currentsDaysEvent={currentsDaysEvent} />
         </Box>
       </Box>
     </Box>
