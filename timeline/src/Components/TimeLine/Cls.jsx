@@ -3,7 +3,6 @@ import ClassOne from "./ClassOne";
 import { HStack, Box } from "@chakra-ui/react";
 
 const Cls = ({ currentsDaysEvent }) => {
-  var startTime = [0];
   const classList = [];
   const iatList = [];
   const examList = [];
@@ -25,28 +24,27 @@ const Cls = ({ currentsDaysEvent }) => {
     });
   };
   getLists();
-  console.log(classList);
-
+  console.log("classList", classList);
   return (
-    <Box  mt={'46px'}>
+    <Box mt={"46px"}>
       <HStack pos={"relative"} mb={"76.5px"}>
-        {startTime.map((stime) => {
-          return <ClassOne stime={stime} />;
+        {classList.map((item) => {
+          return <ClassOne item={item} />;
         })}
       </HStack>
-      <HStack  pos={"relative"} mb={"76.5px"}>
-        {startTime.map((stime) => {
-          return <ClassOne stime={stime} />;
+      <HStack pos={"relative"} mb={"76.5px"}>
+        {examList.map((item) => {
+          return <ClassOne item={item} />;
         })}
       </HStack>
-      <HStack   pos={"relative"} mb={"76.5px"}>
-        {startTime.map((stime) => {
-          return <ClassOne stime={stime} />;
+      <HStack pos={"relative"} mb={"76.5px"}>
+        {testList.map((item) => {
+          return <ClassOne item={item} />;
         })}
       </HStack>
-      <HStack  pos={"relative"} mb={"75px"}>
-        {startTime.map((stime) => {
-          return <ClassOne stime={stime} />;
+      <HStack pos={"relative"} mb={"75px"}>
+        {iatList.map((item) => {
+          return <ClassOne item={item} />;
         })}
       </HStack>
     </Box>

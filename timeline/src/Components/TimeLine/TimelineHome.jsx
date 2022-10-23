@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Timeline from "./Timeline";
 import Cls from "./Cls";
 const Timelinehome = ({ currentsDaysEvent, typesSet }) => {
