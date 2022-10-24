@@ -1,7 +1,7 @@
 import React from "react";
 import { HStack, Box, Text } from "@chakra-ui/react";
 const TimeLineOne = ({ time }) => {
-  var width = 400;
+  var width = 264;
   return (
     <HStack>
       {/* bg="yellow.200" */}

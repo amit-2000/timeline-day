@@ -1,7 +1,9 @@
 import React from "react";
-import ClassOne from "./ClassOne";
 import { HStack, Box } from "@chakra-ui/react";
-
+import Classes from "./Type/Classes";
+import Tests from "./Type/Tests";
+import Exams from "./Type/Exams";
+import IAT from "./Type/IAT";
 const Cls = ({ currentsDaysEvent }) => {
   const classList = [];
   const iatList = [];
@@ -29,25 +31,25 @@ const Cls = ({ currentsDaysEvent }) => {
     <Box mt={"46px"}>
       <HStack pos={"relative"} mb={"76.5px"}>
         {classList.map((item) => {
-          return <ClassOne item={item} />;
+          return <Classes item={item} />;
         })}
       </HStack>
       <HStack pos={"relative"} mb={"76.5px"}>
         {examList.map((item) => {
-          return <ClassOne item={item} />;
+          return <Exams item={item} />;
+        })}
+      </HStack>
+
+      <HStack pos={"relative"} mb={"75px"}>
+        {iatList.map((item) => {
+          return <IAT item={item} />;
         })}
       </HStack>
       <HStack pos={"relative"} mb={"76.5px"}>
         {testList.map((item) => {
-          return <ClassOne item={item} />;
+          return <Tests item={item} />;
         })}
       </HStack>
-      <HStack pos={"relative"} mb={"75px"}>
-        {iatList.map((item) => {
-          return <ClassOne item={item} />;
-        })}
-      </HStack>
-  
     </Box>
   );
 };

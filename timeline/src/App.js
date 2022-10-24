@@ -22,7 +22,7 @@ const App = () => {
     };
 
     getTypes();
-    console.log(typesSet);
+    // console.log(typesSet);
     const dateList = new Set(); // got unique Dates.
     function getDateList() {
       data.forEach((item) => {
@@ -48,10 +48,10 @@ const App = () => {
         const date = new Date(item.start_time * 1000);
         const newDate = date.getDate();
         const day = date.getDay();
-        console.log(currentDate);
+        // console.log(currentDate);
         if (datesRef.current === days[day] + " " + newDate) {
           events.push(item);
-          console.log(date);
+          // console.log(date);
         }
       });
       setCurrentsDaysEvent(events);
@@ -72,7 +72,7 @@ const App = () => {
         console.log("hhgh");
       }
     } else {
-      if (i < dates.length-1) {
+      if (i < dates.length - 1) {
         const date = dates[i + 1];
         datesRef.current = date;
         setCurrentDate(date);
