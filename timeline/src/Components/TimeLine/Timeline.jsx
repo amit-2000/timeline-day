@@ -31,7 +31,7 @@ function Timeline() {
   ];
 
   return (
-    <HStack spacing="0" h={"60px"}>
+    <HStack spacing="0" h={"60px"} position={"sticky"}>
       {time.map((item) => {
         return <TimeLineOne time={item} />;
       })}

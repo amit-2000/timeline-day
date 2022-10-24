@@ -2,8 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import CurrentDate from "./CurrentDate";
 
-const Sidebar = ({ dateList }) => {
-  const dates = [...dateList];
+const Sidebar = ({ dateList, currentDate }) => {
   return (
     <Box
       boxSizing="border-box"
@@ -15,7 +14,6 @@ const Sidebar = ({ dateList }) => {
       top={"112px"}
       backgroundColor="#FFFFFF"
       borderRadius={5}
-     
     >
       <Box
         display={"flex"}
@@ -43,8 +41,12 @@ const Sidebar = ({ dateList }) => {
         position="relative"
         top={"68px"}
       >
-        {dates.map((item) => {
-          return <CurrentDate item={item} />;
+        {dateList.map((item, itr) => {
+          return item === currentDate ? (
+            <CurrentDate item={item} styleDate={true} event={true} />
+          ) : (
+            <CurrentDate item={item} styleDate={false} event={false} />
+          );
         })}
       </Box>
     </Box>

@@ -28,7 +28,7 @@ const ClassOne = ({ item }) => {
   }
 
   const newWidth = endingTime - startingTime;
-  console.log(newWidth);
+  // console.log(newWidth);
   return (
     <HStack spacing="24px" bg={"red"}>
       <Box

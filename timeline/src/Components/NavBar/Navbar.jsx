@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Text, Center } from "@chakra-ui/react";
 
-function Navbar() {
+const Navbar = ({ handleClick }) => {
   return (
     <Box
       pos={"absolute"}
@@ -9,8 +9,7 @@ function Navbar() {
       h={"60px"}
       top={47}
       left={15}
-        backgroundColor={"#FFFFFF"}
-       
+      backgroundColor={"#FFFFFF"}
       borderRadius={5}
     >
       <Box
@@ -45,6 +44,7 @@ function Navbar() {
           background: " #F4F4F4",
           borderRadius: " 5px",
         }}
+        onClick={() => handleClick("prev")}
       >
         {"<"}
       </Center>
@@ -64,13 +64,13 @@ function Navbar() {
           h: 29,
           background: " #F4F4F4",
           borderRadius: " 5px",
-          //   transform: "matrix(-1, 0, 0, 1, 0, 0)",
         }}
+        onClick={() => handleClick("next")}
       >
         {">"}
       </Center>
     </Box>
   );
-}
+};
 
 export default Navbar;

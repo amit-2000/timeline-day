@@ -24,7 +24,7 @@ const Cls = ({ currentsDaysEvent }) => {
     });
   };
   getLists();
-  console.log("examList", examList);
+  // console.log("examList", examList);
   return (
     <Box mt={"46px"}>
       <HStack pos={"relative"} mb={"76.5px"}>

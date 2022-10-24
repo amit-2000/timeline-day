@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import Navbar from "./Components/NavBar/Navbar";
@@ -6,58 +6,90 @@ import Sidebar from "./Components/SideBar/Sidebar";
 import Timelinehome from "./Components/TimeLine/TimelineHome";
 import { data } from "./utils";
 const App = () => {
-  // const [currentDate, setCurrentDate] = useState({
-  //   day: "fri 10",
-  //   unixTimeStamp: 1212121212,
-  // });
-  // const [currentSchedule, setCurrentSchedule] = useState(data[0]);
-  // const handleDate()
-  // taking first item for the first time
-  const date = new Date(data[0].start_time * 1000);
+  const datesRef = useRef();
+  const [currentsDaysEvent, setCurrentsDaysEvent] = useState([]);
+  const [currentDate, setCurrentDate] = useState([]);
+  let [dates, setDates] = useState([]);
+  let [i, setI] = useState(0);
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  const selectedDay = date.getDate();
-  // -------------------------------------------------
-  const currentsDaysEvent = [];
-  const getEventsOfTheDay = () => {
-    data.forEach((item) => {
-      const date = new Date(item.start_time * 1000);
-      if (selectedDay === date.getDate()) {
-        currentsDaysEvent.push(item);
-      }
-    });
-  };
-  getEventsOfTheDay();
-  // console.log(currentsDaysEvent);
-  // -------------------------------------------
-  const dateList = new Set(); // got unique Dates.
-  const getDateList = () => {
-    data.forEach((item) => {
-      const date = new Date(item.start_time * 1000);
-      const newDate = date.getDate();
-      const day = date.getDay();
-      dateList.add(days[day] + " " + newDate);
-    });
-    // console.log(dateList);
-  };
-  getDateList();
-  // ---------------------------------------------
-  const typesSet = new Set();
-  const getTypes = () => {
-    data.forEach((item) => {
-      typesSet.add(item.type);
-    });
-  };
-  getTypes();
-  console.log(typesSet);
+
+  useEffect(() => {
+    const typesSet = new Set();
+    const getTypes = () => {
+      data.forEach((item) => {
+        typesSet.add(item.type);
+      });
+    };
+
+    getTypes();
+    console.log(typesSet);
+    const dateList = new Set(); // got unique Dates.
+    function getDateList() {
+      data.forEach((item) => {
+        const date = new Date(item.start_time * 1000);
+        const newDate = date.getDate();
+        const day = date.getDay();
+
+        dateList.add(days[day] + " " + newDate);
+      });
+      let arr = [...dateList];
+      setDates([...dateList]);
+      datesRef.current = arr[0];
+      setCurrentDate(arr[0]);
+    }
+    getDateList();
+  }, []);
+  //
+  useEffect(() => {
+    function getEventsOfTheDay() {
+      // debugger;
+      var events = [];
+      data.forEach((item) => {
+        const date = new Date(item.start_time * 1000);
+        const newDate = date.getDate();
+        const day = date.getDay();
+        console.log(currentDate);
+        if (datesRef.current === days[day] + " " + newDate) {
+          events.push(item);
+          console.log(date);
+        }
+      });
+      setCurrentsDaysEvent(events);
+    }
+    getEventsOfTheDay();
+  }, [datesRef.current]);
   // ------------------------------------------
+
+  // -------------------------------
+  // handleClick
+  const handleClick = (action) => {
+    if (action === "prev") {
+      if (i > 0) {
+        const date = dates[i - 1];
+        datesRef.current = date;
+        setCurrentDate(date);
+        setI(i - 1);
+        console.log("hhgh");
+      }
+    } else {
+      if (i < dates.length-1) {
+        const date = dates[i + 1];
+        datesRef.current = date;
+        setCurrentDate(date);
+        setI(i + 1);
+        console.log(date);
+      }
+    }
+  };
+  console.log(currentDate);
   return (
     <ChakraProvider>
       <Box>
-        <Navbar />
-        <Sidebar dateList={dateList} />
+        <Navbar handleClick={handleClick} />
+        <Sidebar dateList={dates} currentDate={currentDate} />
         <Timelinehome
           currentsDaysEvent={currentsDaysEvent}
-          typesSet={typesSet}
+          // typesSet={typesSet}
         />
       </Box>
     </ChakraProvider>

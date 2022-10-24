@@ -618,5 +618,3 @@ export const data = [
     end_time: 1666550404,
   },
 ];
-
-console.log(data.length);
