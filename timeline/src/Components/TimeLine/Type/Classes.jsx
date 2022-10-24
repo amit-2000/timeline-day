@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { HStack, Box, Text } from "@chakra-ui/react";
-//
+
 const Classes = ({ item }) => {
   // console.log(item);
+    const myRef = useRef(null);
+    useEffect(() => {
+      myRef.current.scrollIntoView({
+        block: "end",
+        inline: "center",
+        behavior: "smooth",
+      });
+    }, []);
   var date = new Date(item.start_time * 1000);
   var start_hour = date.getHours();
   var start_minute = date.getMinutes();
@@ -197,15 +205,16 @@ const Classes = ({ item }) => {
       </Box>
       {/* ---------------------------------------------------------------------------------------------------- */}
       <Box
+        ref={myRef}
         position={"absolute"}
         w={"561px"}
         height={0.4}
         top={"220px"}
         left={
           new Date().getHours() * width +
-          0 +
-          (new Date().getMinutes() - 10) * onecandle -
-          280
+          4 +
+          (new Date().getMinutes() - 6) * onecandle -
+          299
         }
         border={"1px solid #FF525"}
         transform={"rotate(90deg)"}

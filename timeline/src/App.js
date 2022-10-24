@@ -7,6 +7,7 @@ import Timelinehome from "./Components/TimeLine/TimelineHome";
 import { data } from "./utils";
 const App = () => {
   const datesRef = useRef();
+
   const [currentsDaysEvent, setCurrentsDaysEvent] = useState([]);
   const [currentDate, setCurrentDate] = useState([]);
   let [dates, setDates] = useState([]);
@@ -92,6 +93,7 @@ const App = () => {
           // typesSet={typesSet}
         />
       </Box>
+        
     </ChakraProvider>
   );
 };

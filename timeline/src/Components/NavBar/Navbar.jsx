@@ -1,7 +1,8 @@
-import React from "react";
+import React  from "react";
 import { Box, Text, Center } from "@chakra-ui/react";
 
 const Navbar = ({ handleClick }) => {
+
   return (
     <Box
       pos={"absolute"}
