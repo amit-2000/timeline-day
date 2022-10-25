@@ -34,8 +34,8 @@ const Sidebar = ({ dateList, currentDate }) => {
         display={"flex"}
         flexDirection="column"
         justifyContent={"center"}
-        alignItems={"center"}
         position="relative"
+        alignItems={"center"}
         top={"68px"}
       >
         {dateList.map((item, itr) => {
