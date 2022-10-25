@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Box } from "@chakra-ui/react";
+import { Box, Center, Divider, Stack } from "@chakra-ui/react";
 import Navbar from "./Components/NavBar/Navbar";
 import Sidebar from "./Components/SideBar/Sidebar";
 import Timelinehome from "./Components/TimeLine/TimelineHome";
 import { data } from "./utils";
+import { extendTheme } from "@chakra-ui/react";
+
 const App = () => {
   const datesRef = useRef();
 
@@ -82,9 +84,18 @@ const App = () => {
       }
     }
   };
+  const theme = extendTheme({
+    colors: {
+      brand: {
+        100: "#343434",
+        // ...
+        900: "#1a202c",
+      },
+    },
+  });
   console.log(currentDate);
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Box>
         <Navbar handleClick={handleClick} />
         <Sidebar dateList={dates} currentDate={currentDate} />
@@ -93,7 +104,7 @@ const App = () => {
           // typesSet={typesSet}
         />
       </Box>
-        
+      
     </ChakraProvider>
   );
 };

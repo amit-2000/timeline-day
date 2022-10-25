@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { HStack, Box, Text } from "@chakra-ui/react";
-
+import { HStack, Box, Text, Stack, Divider } from "@chakra-ui/react";
 const Classes = ({ item }) => {
   // console.log(item);
   // const myRef = useRef(null);
@@ -205,6 +204,7 @@ const Classes = ({ item }) => {
       </Box>
       {/* ---------------------------------------------------------------------------------------------------- */}
       {/* <Box
+      
         ref={myRef}
         position={"absolute"}
         w={"561px"}
@@ -221,6 +221,25 @@ const Classes = ({ item }) => {
         bg={"red"}
         zIndex={1}
       ></Box> */}
+      {/* <Box
+        ref={myRef}
+        position={"absolute"}
+        left={
+          new Date().getHours() * width +
+          4 +
+          (new Date().getMinutes() - 6) * onecandle -
+          299
+        }
+        top={"-50px"}
+      >
+        <Stack height={"570px"}>
+          <Divider
+            borderColor={"#FF5252"}
+            orientation="vertical"
+            borderLeft={"2px"}
+          />
+        </Stack>
+      </Box> */}
     </HStack>
   );
 };
