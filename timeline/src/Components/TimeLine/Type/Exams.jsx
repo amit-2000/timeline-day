@@ -9,16 +9,16 @@ const Exams = ({ item }) => {
   var date_end = new Date(item.end_time * 1000);
   var end_hour = date_end.getHours();
   var end_minute = date_end.getMinutes();
-  // console.log(end_minute);
-//   console.log(
-//     start_hour,
-//     ":",
-//     start_minute,
-//     end_hour,
-//     ":",
-//     end_minute,
-//     item.end_time
-//   );
+  console.log(end_minute);
+  console.log(
+    start_hour,
+    ":",
+    start_minute,
+    end_hour,
+    ":",
+    end_minute,
+    item.end_time
+  );
 
   var width = 264;
   var onecandle = width / 60;
@@ -30,9 +30,9 @@ const Exams = ({ item }) => {
   }
 
   let newWidth = endingTime - startingTime;
-  if (newWidth < 300) {
-    newWidth += 100;
-  }
+  // if (newWidth < 300) {
+  //   newWidth += 100;
+  // }
   // console.log(newWidth);
   return (
     <HStack spacing="24px" bg={"red"}>

@@ -31,9 +31,9 @@ const IAT = ({ item }) => {
   }
 
   let newWidth = endingTime - startingTime;
-  if (newWidth < 300) {
-    newWidth += 100;
-  }
+  // if (newWidth < 300) {
+  //   newWidth += 100;
+  // }
   // console.log(newWidth);
   return (
     <HStack spacing="24px" bg={"red"}>
