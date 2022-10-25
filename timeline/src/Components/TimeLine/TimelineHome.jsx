@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import { Box, Center, Divider, Stack, Text } from "@chakra-ui/react";
 import Timeline from "./Timeline";
 import Cls from "./Cls";
-import { Minimize } from "@mui/icons-material";
 const Timelinehome = ({ currentsDaysEvent, typesSet }) => {
   // console.log(currentsDaysEvent, [...typesSet]);
   // console.log(item);
@@ -64,10 +63,31 @@ const Timelinehome = ({ currentsDaysEvent, typesSet }) => {
               // marginTop="140px"
             >
               <Stack height={"400px"} marginTop={"34px"}>
-                <Text color={"red"} marginLeft="-30px" width={"70px"}>
+                <Text
+                  color={"red"}
+                  marginLeft="-30px"
+                  // marginBottom={"0px"}
+                  width={"70px"}
+                  fontWeight={600}
+                >
                   {strTime}
                 </Text>
-                <Divider orientation="vertical" borderColor={"#FF5252"} />
+                <Box
+                  marginLeft="-30px"
+                  position="absolute"
+                  left={"-4px"}
+                  bottom={"364px"}
+                >
+                  <Text
+                    // border={"1.5px solid white"}
+                    color={"red"}
+                    background="red"
+                    borderRadius={"50%"}
+                    width="9px"
+                    height={"9px"}
+                  ></Text>
+                </Box>
+                <Divider orientation="vertical" borderColor={"red"} />
               </Stack>
             </Box>
           </Center>

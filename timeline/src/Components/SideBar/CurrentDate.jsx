@@ -16,7 +16,12 @@ const CurrentDate = ({ item, styleDate, event }) => {
       mb={1}
     >
       <Text>{item}</Text>
-      <Box border={"1.5px solid white"} ml={-4} color={"white"} borderRadius={"50%"}>
+      <Box
+        border={"1.5px solid #F4F4F4"}
+        ml={-4}
+        color={"white"}
+        borderRadius={"50%"}
+      >
         {event && (
           <Center
             border={"3px solid red"}

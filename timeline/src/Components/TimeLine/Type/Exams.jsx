@@ -9,6 +9,31 @@ const Exams = ({ item }) => {
   var date_end = new Date(item.end_time * 1000);
   var end_hour = date_end.getHours();
   var end_minute = date_end.getMinutes();
+  // 
+    let s = start_minute,
+      e = end_minute;
+    if (s < 10) {
+      s = "0" + start_minute;
+    }
+    if (e < 10) {
+      e = "0" + e;
+    }
+    let starting_Time =
+      start_hour >= 12
+        ? start_hour - 12 + ":" + s + "PM"
+        : "0" + start_hour + ":" + s + "AM";
+    let ending_Time =
+      end_hour > 12
+        ? end_hour - 12 + ":" + e + "PM"
+        : "0" + end_hour + ":" + e + "AM";
+
+    if (end_hour - 12 < 10) {
+      ending_Time = "0" + ending_Time;
+    }
+    if (start_hour - 12 < 10) {
+      starting_Time = "0" + starting_Time;
+      // console.log(starting_Time, ending_Time);
+    }
   // console.log(end_minute);
   // console.log(
   //   start_hour,
@@ -134,7 +159,7 @@ const Exams = ({ item }) => {
             fontSize={"10px"}
             lineHeight={"12px"}
           >
-            09:00AM-10:00AM
+            {starting_Time}-{ending_Time}
           </Text>
         </Box>
         <Box
