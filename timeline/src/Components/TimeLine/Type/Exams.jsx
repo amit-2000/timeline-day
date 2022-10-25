@@ -61,7 +61,6 @@ const Exams = ({ item }) => {
   // console.log(newWidth);
   return (
     <HStack spacing="24px" bg={"red"}>
-      {/* ---------------------------------------------------------------------------------------------------- */}
 
       <Box
         w={newWidth}
@@ -128,7 +127,7 @@ const Exams = ({ item }) => {
             Physics Examination
             {/* {item.title} */}
           </Text>
-          {/* <Text
+          <Text
             position={"absolute"}
             width={"99px"}
             height="14px"
@@ -143,15 +142,15 @@ const Exams = ({ item }) => {
             fontSize={"12px"}
             lineHeight={"15px"}
           >
-            Michel Corleone
-            {/* {item.subtitle} */}
-          {/* </Text> */}
+            {/* Michel Corleone */}
+            {item.subtitle}
+          </Text>
           <Text
             position={"absolute"}
             width={"103px"}
             height="12px"
             left="38px"
-            top="34px"
+            top="54px"
             // color={"#6F6CE5"}
             fontFamily="Inter"
             fontStyle={"normal"}
@@ -197,23 +196,7 @@ const Exams = ({ item }) => {
           </Text>
         </Box>
       </Box>
-      {/* ---------------------------------------------------------------------------------------------------- */}
-      {/* <Box
-        position={"absolute"}
-        w={"561px"}
-        height={0.4}
-        top={"220px"}
-        left={
-          new Date().getHours() * width +
-          4 +
-          (new Date().getMinutes() - 6) * onecandle -
-          299
-        }
-        border={"1px solid #FF525"}
-        transform={"rotate(90deg)"}
-        bg={"red"}
-        zIndex={1}
-      ></Box> */}
+   
     </HStack>
   );
 };

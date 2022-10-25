@@ -1,14 +1,14 @@
-import React  from "react";
+import React from "react";
 import { Box, Text, Center } from "@chakra-ui/react";
 
 const Navbar = ({ handleClick }) => {
-
   return (
     <Box
       pos={"absolute"}
-      width={1250}
+      width={1248}
       h={"60px"}
       top={47}
+      marginLeft={"5px"}
       left={15}
       backgroundColor={"#FFFFFF"}
       borderRadius={5}
@@ -23,7 +23,6 @@ const Navbar = ({ handleClick }) => {
         fontStyle={"normal"}
         fontWeight="500"
         fontSize={24}
-        // lineHeight={29}
         color={"#733D47"}
       >
         <Text>January 2022</Text>

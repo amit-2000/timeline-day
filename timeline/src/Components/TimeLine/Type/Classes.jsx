@@ -82,6 +82,7 @@ const Classes = ({ item }) => {
         gap={"10px"}
         bg={"#f2f2ff"}
         borderRadius={"5px"}
+        color={"#6F6CE5"}
       >
         <Box
           display={"flex"}
@@ -121,7 +122,6 @@ const Classes = ({ item }) => {
             height="17px"
             left="38px"
             top="10px"
-            color={item.color}
             border-radius="28px"
             borderRadius={"50%"}
             fontFamily="Inter"
@@ -139,7 +139,6 @@ const Classes = ({ item }) => {
             height="14px"
             left="38px"
             top="32px"
-            color={"#6F6CE5"}
             border-radius="28px"
             borderRadius={"50%"}
             fontFamily="Inter"
@@ -157,7 +156,6 @@ const Classes = ({ item }) => {
             height="12px"
             left="38px"
             top="54px"
-            color={"#6F6CE5"}
             fontFamily="Inter"
             fontStyle={"normal"}
             fontWeight={400}
@@ -192,7 +190,6 @@ const Classes = ({ item }) => {
             fontWeight={500}
             fontSize={"10px"}
             lineHeight={"12px"}
-            color={"#6F6CE5"}
             flex={"none"}
             order={0}
             flexGrow={0}
@@ -202,44 +199,7 @@ const Classes = ({ item }) => {
           </Text>
         </Box>
       </Box>
-      {/* ---------------------------------------------------------------------------------------------------- */}
-      {/* <Box
-      
-        ref={myRef}
-        position={"absolute"}
-        w={"561px"}
-        height={0.4}
-        top={"220px"}
-        left={
-          new Date().getHours() * width +
-          4 +
-          (new Date().getMinutes() - 6) * onecandle -
-          299
-        }
-        border={"1px solid #FF525"}
-        transform={"rotate(90deg)"}
-        bg={"red"}
-        zIndex={1}
-      ></Box> */}
-      {/* <Box
-        ref={myRef}
-        position={"absolute"}
-        left={
-          new Date().getHours() * width +
-          4 +
-          (new Date().getMinutes() - 6) * onecandle -
-          299
-        }
-        top={"-50px"}
-      >
-        <Stack height={"570px"}>
-          <Divider
-            borderColor={"#FF5252"}
-            orientation="vertical"
-            borderLeft={"2px"}
-          />
-        </Stack>
-      </Box> */}
+     
     </HStack>
   );
 };

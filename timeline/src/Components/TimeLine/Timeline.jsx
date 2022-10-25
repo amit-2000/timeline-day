@@ -1,5 +1,5 @@
 import React from "react";
-import { HStack } from "@chakra-ui/react";
+import { HStack, Box } from "@chakra-ui/react";
 import TimeLineOne from "./TimeLineOne";
 function Timeline() {
   var time = [
@@ -31,11 +31,13 @@ function Timeline() {
   ];
 
   return (
-    <HStack spacing="0" h={"60px"} position={"sticky"}>
-      {time.map((item) => {
-        return <TimeLineOne time={item} />;
-      })}
-    </HStack>
+    <Box>
+      <HStack spacing="0" h={"60px"} position={"sticky"}>
+        {time.map((item) => {
+          return <TimeLineOne time={item} />;
+        })}
+      </HStack>
+    </Box>
   );
 }
 

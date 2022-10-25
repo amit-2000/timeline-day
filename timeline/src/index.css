@@ -16,3 +16,6 @@ code {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
 }
+html{
+  background-color: #f5f4f4;
+}

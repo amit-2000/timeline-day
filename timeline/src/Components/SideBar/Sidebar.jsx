@@ -1,7 +1,7 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import CurrentDate from "./CurrentDate";
-
+import { CalendarIcon } from "@chakra-ui/icons";
 const Sidebar = ({ dateList, currentDate }) => {
   return (
     <Box
@@ -9,7 +9,6 @@ const Sidebar = ({ dateList, currentDate }) => {
       position={"absolute"}
       w={"112px"}
       h={"609px"}
-      //   left={5}
       left={"20px"}
       top={"112px"}
       backgroundColor="#FFFFFF"
@@ -20,18 +19,16 @@ const Sidebar = ({ dateList, currentDate }) => {
         flexDirection="row"
         justifyContent={"center"}
         alignItems={"center"}
-        // padding={1}
-        // gap={1}
         position={"absolute"}
         w={"100px"}
         h="59px"
-        // left={"6px"}
         left={"6px"}
         top={1}
         backgroundColor={"#F4F4F4"}
         borderRadius={"5px"}
       >
-        {"<>"}
+        {/* {"<>"} */}
+        <CalendarIcon />
       </Box>
       <Box
         display={"flex"}
