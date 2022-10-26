@@ -60,7 +60,7 @@ const Exams = ({ item }) => {
   // }
   // console.log(newWidth);
   return (
-    <HStack spacing="24px" bg={"red"}>
+    <HStack spacing="24px">
       <Box
         w={newWidth + "px"}
         h="73px"

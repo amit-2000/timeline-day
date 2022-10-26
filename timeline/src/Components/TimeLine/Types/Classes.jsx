@@ -1,5 +1,5 @@
 import React from "react";
-import { HStack, Box, Text } from "@chakra-ui/react";
+import { HStack, Box, Text, Flex } from "@chakra-ui/react";
 const Classes = ({ item }) => {
   var date = new Date(item.start_time * 1000);
   var start_hour = date.getHours();
@@ -33,11 +33,11 @@ const Classes = ({ item }) => {
     // console.log(starting_Time, ending_Time);
   }
 
-  var width = 264;
-  var onecandle = width / 60;
+  var w = 264;
+  var onecandle = w / 60;
 
-  const startingTime = start_hour * width + 4 + start_minute * onecandle;
-  let endingTime = end_hour * width + 4 + end_minute * onecandle;
+  const startingTime = start_hour * w + 4 + start_minute * onecandle;
+  let endingTime = end_hour * w + 4 + end_minute * onecandle;
   if (endingTime < startingTime) {
     endingTime = startingTime + 264;
   }
@@ -57,19 +57,17 @@ const Classes = ({ item }) => {
   // );
   // console.log(newWidth);
   return (
-    <HStack spacing="24px" bg={"red"}>
+    <HStack spacing="24px">
       {/* ---------------------------------------------------------------------------------------------------- */}
 
-      <Box
+      <Flex
         w={newWidth + "px"}
         h="73px"
         pos={"absolute"}
-        left={start_hour * width + 4 + start_minute * onecandle}
-        // bg="yellow.200"
-        display={"flex"}
-        flexDirection={"row"}
-        alignItems={"flex-start"}
-        padding={"10px"}
+        left={start_hour * w + 4 + start_minute * onecandle}
+        direction={"row"}
+        align={"flex-start"}
+        p={"10px"}
         gap={"10px"}
         bg={"#f2f2ff"}
         color={"#6F6CE5"}
@@ -77,15 +75,14 @@ const Classes = ({ item }) => {
         fontSize={"12px"}
         fontWeight={600}
       >
-        <Box
-          display={"flex"}
-          alignItems={"flex-start"}
-          flexDirection={"column"}
-          padding={"5px"}
+        <Flex
+          align={"flex-start"}
+          direction={"column"}
+          p={"5px"}
           gap={"10px"}
           pos={"absolute"}
-          width={"22px"}
-          height="22px"
+          w={"22px"}
+          h="22px"
           left="10px"
           top="10px"
           bg="#6F6CE6"
@@ -104,12 +101,12 @@ const Classes = ({ item }) => {
           >
             PS
           </Text>
-        </Box>
+        </Flex>
         <Box>
           <Text
             position={"absolute"}
-            width={"51px"}
-            height="17px"
+            w={"51px"}
+            h="17px"
             left="38px"
             top="10px"
             fontSize={"15px"}
@@ -120,8 +117,8 @@ const Classes = ({ item }) => {
           </Text>
           <Text
             position={"absolute"}
-            width={"112px"}
-            height="14px"
+            w={"112px"}
+            h="14px"
             left="38px"
             top="32px"
             lineHeight={"15px"}
@@ -131,8 +128,8 @@ const Classes = ({ item }) => {
           </Text>
           <Text
             position={"absolute"}
-            width={"112px"}
-            height="12px"
+            w={"112px"}
+            h="12px"
             left="38px"
             top="54px"
             fontSize={"10px"}
@@ -145,10 +142,10 @@ const Classes = ({ item }) => {
           display={"flex"}
           alignItems={"flex-start"}
           flexDirection={"row"}
-          padding={"5px 10px"}
+          p={"5px 10px"}
           gap={"10px"}
-          width={"51px"}
-          height="22px"
+          w={"51px"}
+          h="22px"
           bg="#FFFF"
           borderRadius={"8px"}
           flex={"none"}
@@ -169,7 +166,7 @@ const Classes = ({ item }) => {
             {/* {item.location} */}
           </Text>
         </Box>
-      </Box>
+      </Flex>
     </HStack>
   );
 };
