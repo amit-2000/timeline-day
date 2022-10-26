@@ -27,48 +27,50 @@ const Navbar = ({ handleClick }) => {
       >
         <Text>January 2022</Text>
       </Box>
-      <Center
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          aligntems: "center",
-          padding: " 5px 8px",
-          gap: " 10px",
-          position: "absolute",
-          width: "27px",
-          height: "25px",
-          left: "1160px",
-          top: 18,
-          h: 29,
-          background: " #F4F4F4",
-          borderRadius: " 5px",
-        }}
-        onClick={() => handleClick("prev")}
-      >
-        {"<"}
-      </Center>
-      <Center
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          aligntems: "center",
-          padding: " 5px 8px",
-          gap: " 10px",
-          position: "absolute",
-          width: "27px",
-          height: "25px",
-          left: "1200px",
-          top: 18,
-          h: 29,
-          background: " #F4F4F4",
-          borderRadius: " 5px",
-        }}
-        onClick={() => handleClick("next")}
-      >
-        {">"}
-      </Center>
+      <Box cursor={"pointer"}>
+        <Center
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            aligntems: "center",
+            padding: " 5px 8px",
+            gap: " 10px",
+            position: "absolute",
+            width: "27px",
+            height: "25px",
+            left: "1160px",
+            top: 18,
+            h: 29,
+            background: " #F4F4F4",
+            borderRadius: " 5px",
+          }}
+          onClick={() => handleClick("prev")}
+        >
+          {"<"}
+        </Center>
+        <Center
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            aligntems: "center",
+            padding: " 5px 8px",
+            gap: " 10px",
+            position: "absolute",
+            width: "27px",
+            height: "25px",
+            left: "1200px",
+            top: 18,
+            h: 29,
+            background: " #F4F4F4",
+            borderRadius: " 5px",
+          }}
+          onClick={() => handleClick("next")}
+        >
+          {">"}
+        </Center>
+      </Box>
     </Box>
   );
 };

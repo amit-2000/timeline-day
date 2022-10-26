@@ -75,6 +75,8 @@ const Tests = ({ item }) => {
         bg={"#F6FFFE"}
         borderRadius={"5px"}
         color={"#19A392"}
+        fontWeight={600}
+        fontSize={"12px"}
       >
         <Box
           display={"flex"}
@@ -92,10 +94,6 @@ const Tests = ({ item }) => {
           borderRadius={"50%"}
         >
           <Text
-            // w={"20ox"}
-            // h={"20px"}
-            fontFamily="Inter"
-            fontStyle={"normal"}
             fontWeight={500}
             fontSize={"10px"}
             lineHeight={"12px"}
@@ -116,12 +114,6 @@ const Tests = ({ item }) => {
             height="17px"
             left="38px"
             top="10px"
-            // color={item.color}
-            border-radius="28px"
-            borderRadius={"50%"}
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={500}
             fontSize={"15px"}
             lineHeight={"17px"}
           >
@@ -135,10 +127,6 @@ const Tests = ({ item }) => {
             height="12px"
             left="38px"
             top="34px"
-            // color={"#6F6CE5"}
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={400}
             fontSize={"10px"}
             lineHeight={"12px"}
           >
@@ -165,12 +153,7 @@ const Tests = ({ item }) => {
           <Text
             // width={"31px"}
             h={"12px"}
-            fontFamily={"Inter"}
-            fontStyle={"normal"}
-            fontWeight={500}
-            fontSize={"10px"}
             lineHeight={"12px"}
-            // color={"#6F6CE5"}
             flex={"none"}
             order={0}
             flexGrow={0}

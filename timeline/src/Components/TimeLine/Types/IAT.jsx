@@ -1,22 +1,16 @@
-import React, { useRef, useEffect } from "react";
-import { HStack, Box, Text, Stack, Divider } from "@chakra-ui/react";
-const Classes = ({ item }) => {
+import React from "react";
+import { HStack, Box, Text } from "@chakra-ui/react";
+import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsActiveOutlined";
+
+const IAT = ({ item }) => {
   // console.log(item);
-  // const myRef = useRef(null);
-  // useEffect(() => {
-  //   myRef.current.scrollIntoView({
-  //     block: "end",
-  //     inline: "center",
-  //     behavior: "smooth",
-  //   });
-  // }, []);
   var date = new Date(item.start_time * 1000);
   var start_hour = date.getHours();
   var start_minute = date.getMinutes();
   var date_end = new Date(item.end_time * 1000);
   var end_hour = date_end.getHours();
   var end_minute = date_end.getMinutes();
-  // console.log(end_minute);
+  //
   let s = start_minute,
     e = end_minute;
   if (s < 10) {
@@ -41,6 +35,16 @@ const Classes = ({ item }) => {
     starting_Time = "0" + starting_Time;
     // console.log(starting_Time, ending_Time);
   }
+  // console.log(end_minute);
+  //   console.log(
+  //     start_hour,
+  //     ":",
+  //     start_minute,
+  //     end_hour,
+  //     ":",
+  //     end_minute,
+  //     item.end_time
+  //   );
 
   var width = 264;
   var onecandle = width / 60;
@@ -52,25 +56,14 @@ const Classes = ({ item }) => {
   }
 
   let newWidth = endingTime - startingTime;
-  //   if (newWidth < 300) {
-  //     newWidth += 200;
-  //   }
-  // console.log(
-  //   start_hour,
-  //   ":",
-  //   start_minute,
-  //   end_hour,
-  //   ":",
-  //   end_minute,
-  //   newWidth
-  // );
+  // if (newWidth < 300) {
+  //   newWidth += 100;
+  // }
   // console.log(newWidth);
   return (
     <HStack spacing="24px" bg={"red"}>
-      {/* ---------------------------------------------------------------------------------------------------- */}
-
       <Box
-        w={newWidth + "px"}
+        w={newWidth}
         h="73px"
         pos={"absolute"}
         left={start_hour * width + 4 + start_minute * onecandle}
@@ -80,9 +73,11 @@ const Classes = ({ item }) => {
         alignItems={"flex-start"}
         padding={"10px"}
         gap={"10px"}
-        bg={"#f2f2ff"}
+        bg={"#FFFAF2"}
+        color={"#D7971B"}
         borderRadius={"5px"}
-        color={"#6F6CE5"}
+        fontWeight={600}
+        fontSize={"12px"}
       >
         <Box
           display={"flex"}
@@ -95,7 +90,7 @@ const Classes = ({ item }) => {
           height="22px"
           left="10px"
           top="10px"
-          bg="#6F6CE6"
+          bg="#D7971B"
           border-radius="28px"
           borderRadius={"50%"}
         >
@@ -104,7 +99,6 @@ const Classes = ({ item }) => {
             h={12}
             fontFamily="Inter"
             fontStyle={"normal"}
-            fontWeight={500}
             fontSize={"10px"}
             lineHeight={"12px"}
             color={"#FFFFFF"}
@@ -112,53 +106,43 @@ const Classes = ({ item }) => {
             order={0}
             flexGrow={0}
           >
-            PS
+            <NotificationsActiveOutlinedIcon
+              style={{ width: "13px", height: "13px" }}
+            />
           </Text>
         </Box>
         <Box>
           <Text
             position={"absolute"}
-            width={"51px"}
+            width={"150px"}
             height="17px"
             left="38px"
             top="10px"
             border-radius="28px"
             borderRadius={"50%"}
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={500}
             fontSize={"15px"}
             lineHeight={"17px"}
           >
-            Physics
+            Upload Documents
             {/* {item.title} */}
           </Text>
           <Text
             position={"absolute"}
-            width={"99px"}
+            width={"110px"}
             height="14px"
             left="38px"
             top="32px"
-            border-radius="28px"
-            borderRadius={"50%"}
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={400}
-            fontSize={"12px"}
             lineHeight={"15px"}
           >
-            {/* Michel Corleone */}
-            {item.subtitle}
+            Graphics Designing
+            {/* {item.subtitle} */}
           </Text>
           <Text
             position={"absolute"}
-            width={"99px"}
+            width={"103px"}
             height="12px"
             left="38px"
             top="54px"
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={400}
             fontSize={"10px"}
             lineHeight={"12px"}
           >
@@ -171,7 +155,7 @@ const Classes = ({ item }) => {
           flexDirection={"row"}
           padding={"5px 10px"}
           gap={"10px"}
-          width={"51px"}
+          width={"71px"}
           height="22px"
           bg="#FFFF"
           borderRadius={"8px"}
@@ -179,28 +163,24 @@ const Classes = ({ item }) => {
           order={0}
           flexGrow={0}
           position={"absolute"}
-          left="175px"
+          left="181px"
           top={"10px"}
         >
           <Text
-            width={"31px"}
+            width={"81px"}
             h={"12px"}
-            fontFamily={"Inter"}
-            fontStyle={"normal"}
-            fontWeight={500}
-            fontSize={"10px"}
+            fontSize={"12px"}
             lineHeight={"12px"}
             flex={"none"}
             order={0}
             flexGrow={0}
           >
-            B -302
+            Google Drive
             {/* {item.location} */}
           </Text>
         </Box>
       </Box>
-     
     </HStack>
   );
 };
-export default Classes;
+export default IAT;

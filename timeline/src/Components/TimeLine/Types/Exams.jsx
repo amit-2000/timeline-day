@@ -9,31 +9,31 @@ const Exams = ({ item }) => {
   var date_end = new Date(item.end_time * 1000);
   var end_hour = date_end.getHours();
   var end_minute = date_end.getMinutes();
-  // 
-    let s = start_minute,
-      e = end_minute;
-    if (s < 10) {
-      s = "0" + start_minute;
-    }
-    if (e < 10) {
-      e = "0" + e;
-    }
-    let starting_Time =
-      start_hour >= 12
-        ? start_hour - 12 + ":" + s + "PM"
-        : "0" + start_hour + ":" + s + "AM";
-    let ending_Time =
-      end_hour > 12
-        ? end_hour - 12 + ":" + e + "PM"
-        : "0" + end_hour + ":" + e + "AM";
+  //
+  let s = start_minute,
+    e = end_minute;
+  if (s < 10) {
+    s = "0" + start_minute;
+  }
+  if (e < 10) {
+    e = "0" + e;
+  }
+  let starting_Time =
+    start_hour >= 12
+      ? start_hour - 12 + ":" + s + "PM"
+      : "0" + start_hour + ":" + s + "AM";
+  let ending_Time =
+    end_hour > 12
+      ? end_hour - 12 + ":" + e + "PM"
+      : "0" + end_hour + ":" + e + "AM";
 
-    if (end_hour - 12 < 10) {
-      ending_Time = "0" + ending_Time;
-    }
-    if (start_hour - 12 < 10) {
-      starting_Time = "0" + starting_Time;
-      // console.log(starting_Time, ending_Time);
-    }
+  if (end_hour - 12 < 10) {
+    ending_Time = "0" + ending_Time;
+  }
+  if (start_hour - 12 < 10) {
+    starting_Time = "0" + starting_Time;
+    // console.log(starting_Time, ending_Time);
+  }
   // console.log(end_minute);
   // console.log(
   //   start_hour,
@@ -61,13 +61,11 @@ const Exams = ({ item }) => {
   // console.log(newWidth);
   return (
     <HStack spacing="24px" bg={"red"}>
-
       <Box
-        w={newWidth}
+        w={newWidth + "px"}
         h="73px"
         pos={"absolute"}
         left={start_hour * width + 4 + start_minute * onecandle}
-        // bg="yellow.200"
         display={"flex"}
         flexDirection={"row"}
         alignItems={"flex-start"}
@@ -76,6 +74,8 @@ const Exams = ({ item }) => {
         bg={"#F7EDFF"}
         color={"#B251FF"}
         borderRadius={"5px"}
+        fontSize={"12px"}
+        fontWeight={600}
       >
         <Box
           display={"flex"}
@@ -95,9 +95,6 @@ const Exams = ({ item }) => {
           <Text
             w={12}
             h={12}
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={500}
             fontSize={"10px"}
             lineHeight={"12px"}
             color={"#FFFFFF"}
@@ -111,16 +108,10 @@ const Exams = ({ item }) => {
         <Box>
           <Text
             position={"absolute"}
-            width={"130px"}
+            width={"140px"}
             height="17px"
             left="38px"
             top="10px"
-            // color={item.color}
-            border-radius="28px"
-            borderRadius={"50%"}
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={500}
             fontSize={"15px"}
             lineHeight={"17px"}
           >
@@ -129,17 +120,10 @@ const Exams = ({ item }) => {
           </Text>
           <Text
             position={"absolute"}
-            width={"99px"}
+            width={"112px"}
             height="14px"
             left="38px"
             top="32px"
-            // color={"#6F6CE5"}
-            border-radius="28px"
-            borderRadius={"50%"}
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={400}
-            fontSize={"12px"}
             lineHeight={"15px"}
           >
             {/* Michel Corleone */}
@@ -151,10 +135,6 @@ const Exams = ({ item }) => {
             height="12px"
             left="38px"
             top="54px"
-            // color={"#6F6CE5"}
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={400}
             fontSize={"10px"}
             lineHeight={"12px"}
           >
@@ -179,12 +159,9 @@ const Exams = ({ item }) => {
           top={"10px"}
         >
           <Text
-            width={"31px"}
+            width={"41px"}
             h={"12px"}
-            fontFamily={"Inter"}
-            fontStyle={"normal"}
-            fontWeight={500}
-            fontSize={"10px"}
+        
             lineHeight={"12px"}
             // color={"#6F6CE5"}
             flex={"none"}
@@ -196,7 +173,6 @@ const Exams = ({ item }) => {
           </Text>
         </Box>
       </Box>
-   
     </HStack>
   );
 };

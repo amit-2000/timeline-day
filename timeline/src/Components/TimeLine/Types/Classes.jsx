@@ -1,16 +1,13 @@
 import React from "react";
 import { HStack, Box, Text } from "@chakra-ui/react";
-import NotificationsActiveOutlinedIcon from "@mui/icons-material/NotificationsActiveOutlined";
-
-const IAT = ({ item }) => {
-  // console.log(item);
+const Classes = ({ item }) => {
   var date = new Date(item.start_time * 1000);
   var start_hour = date.getHours();
   var start_minute = date.getMinutes();
   var date_end = new Date(item.end_time * 1000);
   var end_hour = date_end.getHours();
   var end_minute = date_end.getMinutes();
-  //
+  // console.log(end_minute);
   let s = start_minute,
     e = end_minute;
   if (s < 10) {
@@ -35,16 +32,6 @@ const IAT = ({ item }) => {
     starting_Time = "0" + starting_Time;
     // console.log(starting_Time, ending_Time);
   }
-  // console.log(end_minute);
-  //   console.log(
-  //     start_hour,
-  //     ":",
-  //     start_minute,
-  //     end_hour,
-  //     ":",
-  //     end_minute,
-  //     item.end_time
-  //   );
 
   var width = 264;
   var onecandle = width / 60;
@@ -56,14 +43,25 @@ const IAT = ({ item }) => {
   }
 
   let newWidth = endingTime - startingTime;
-  // if (newWidth < 300) {
-  //   newWidth += 100;
-  // }
+  //   if (newWidth < 300) {
+  //     newWidth += 200;
+  //   }
+  // console.log(
+  //   start_hour,
+  //   ":",
+  //   start_minute,
+  //   end_hour,
+  //   ":",
+  //   end_minute,
+  //   newWidth
+  // );
   // console.log(newWidth);
   return (
     <HStack spacing="24px" bg={"red"}>
+      {/* ---------------------------------------------------------------------------------------------------- */}
+
       <Box
-        w={newWidth}
+        w={newWidth + "px"}
         h="73px"
         pos={"absolute"}
         left={start_hour * width + 4 + start_minute * onecandle}
@@ -73,9 +71,11 @@ const IAT = ({ item }) => {
         alignItems={"flex-start"}
         padding={"10px"}
         gap={"10px"}
-        bg={"#FFFAF2"}
-        color={"#D7971B"}
+        bg={"#f2f2ff"}
+        color={"#6F6CE5"}
         borderRadius={"5px"}
+        fontSize={"12px"}
+        fontWeight={600}
       >
         <Box
           display={"flex"}
@@ -88,16 +88,13 @@ const IAT = ({ item }) => {
           height="22px"
           left="10px"
           top="10px"
-          bg="#D7971B"
+          bg="#6F6CE6"
           border-radius="28px"
           borderRadius={"50%"}
         >
           <Text
             w={12}
             h={12}
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={500}
             fontSize={"10px"}
             lineHeight={"12px"}
             color={"#FFFFFF"}
@@ -105,58 +102,39 @@ const IAT = ({ item }) => {
             order={0}
             flexGrow={0}
           >
-            <NotificationsActiveOutlinedIcon
-              style={{ width: "12px", height: "12px" }}
-            />
+            PS
           </Text>
         </Box>
         <Box>
           <Text
             position={"absolute"}
-            width={"130px"}
+            width={"51px"}
             height="17px"
             left="38px"
             top="10px"
-            // color={"##D7971B"}
-            border-radius="28px"
-            borderRadius={"50%"}
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={500}
             fontSize={"15px"}
             lineHeight={"17px"}
           >
-            Upload Documents
+            Physics
             {/* {item.title} */}
           </Text>
           <Text
             position={"absolute"}
-            width={"99px"}
+            width={"112px"}
             height="14px"
             left="38px"
             top="32px"
-            // color={"#6F6CE5"}
-            border-radius="28px"
-            borderRadius={"50%"}
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={400}
-            fontSize={"12px"}
             lineHeight={"15px"}
           >
-            Graphics Designing
-            {/* {item.subtitle} */}
+            {/* Michel Corleone */}
+            {item.subtitle}
           </Text>
           <Text
             position={"absolute"}
-            width={"103px"}
+            width={"112px"}
             height="12px"
             left="38px"
             top="54px"
-            // color={"#6F6CE5"}
-            fontFamily="Inter"
-            fontStyle={"normal"}
-            fontWeight={400}
             fontSize={"10px"}
             lineHeight={"12px"}
           >
@@ -169,7 +147,7 @@ const IAT = ({ item }) => {
           flexDirection={"row"}
           padding={"5px 10px"}
           gap={"10px"}
-          width={"71px"}
+          width={"51px"}
           height="22px"
           bg="#FFFF"
           borderRadius={"8px"}
@@ -177,23 +155,17 @@ const IAT = ({ item }) => {
           order={0}
           flexGrow={0}
           position={"absolute"}
-          left="181px"
+          left="175px"
           top={"10px"}
         >
           <Text
-            width={"71px"}
             h={"12px"}
-            fontFamily={"Inter"}
-            fontStyle={"normal"}
-            fontWeight={500}
-            fontSize={"10px"}
             lineHeight={"12px"}
-            // color={"#6F6CE5"}
             flex={"none"}
             order={0}
             flexGrow={0}
           >
-            Google Drive
+            B -302
             {/* {item.location} */}
           </Text>
         </Box>
@@ -201,4 +173,4 @@ const IAT = ({ item }) => {
     </HStack>
   );
 };
-export default IAT;
+export default Classes;

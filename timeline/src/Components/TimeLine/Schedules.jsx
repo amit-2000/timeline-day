@@ -1,10 +1,10 @@
 import React from "react";
 import { HStack, Box } from "@chakra-ui/react";
-import Classes from "./Type/Classes";
-import Tests from "./Type/Tests";
-import Exams from "./Type/Exams";
-import IAT from "./Type/IAT";
-const Cls = ({ currentsDaysEvent }) => {
+import Classes from "./Types/Classes";
+import Tests from "./Types/Tests";
+import Exams from "./Types/Exams";
+import IAT from "./Types/IAT";
+const Schedules = ({ currentsDaysEvent }) => {
   const classList = [];
   const iatList = [];
   const examList = [];
@@ -54,4 +54,4 @@ const Cls = ({ currentsDaysEvent }) => {
   );
 };
 
-export default Cls;
+export default Schedules;
