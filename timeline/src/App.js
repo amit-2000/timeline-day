@@ -1,22 +1,26 @@
 import React, { useState, useEffect, useRef } from "react";
+// import axios from "axios";
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import Navbar from "./Components/NavBar/Navbar";
 import Sidebar from "./Components/SideBar/Sidebar";
 import Timelinehome from "./Components/TimeLine/TimelineHome";
-import { data } from "./utils";
-const App = () => {
+// import { data } from "./utils";
+const App = ({ data }) => {
+  console.log(data);
   const datesRef = useRef();
   const [currentsDaysEvent, setCurrentsDaysEvent] = useState([]);
   const [currentDate, setCurrentDate] = useState([]);
   let [dates, setDates] = useState([]);
   let [i, setI] = useState(0);
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  // const [data, setData] = useState([]);
+  // const dataRef = useRef();
 
   useEffect(() => {
     // Get types of item
     const typesSet = new Set();
     const getTypes = () => {
-      data.forEach((item) => {
+      data?.forEach((item) => {
         typesSet.add(item.type);
       });
     };
