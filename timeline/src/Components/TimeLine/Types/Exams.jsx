@@ -75,7 +75,7 @@ const Exams = ({ item }) => {
         color={"#B251FF"}
         borderRadius={"5px"}
         fontSize={"12px"}
-        fontWeight={600}
+        fontWeight={500}
       >
         <Box
           display={"flex"}

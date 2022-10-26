@@ -11,25 +11,26 @@ const CurrentDate = ({ item, styleDate, event }) => {
       w={"100px"}
       h="73px"
       bg={styleDate ? "brown" : "#F4F4F4"}
-      color={styleDate ? "white" : ""}
+      color={styleDate ? "#FFFF" : "#909090"}
       borderRadius={"5px"}
       mb={1}
+      fontWeight={500}
     >
-      <Text>{item}</Text>
-        <Box
-          border={"1.5px solid #F4F4F4"}
-          ml={-4}
-          color={"white"}
-          borderRadius={"50%"}
-          >
-          {event  && (
+      <Text fontSize={"15px"}>{item}</Text>
+      <Box
+        border={"1.5px solid #F4F4F4"}
+        ml={-4}
+        color={"white"}
+        borderRadius={"50%"}
+      >
+        {event && (
           <Center
             border={"3px solid red"}
             color={"red"}
             borderRadius={"50%"}
           ></Center>
-          )}
-        </Box>
+        )}
+      </Box>
     </Box>
   );
 };

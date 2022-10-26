@@ -61,7 +61,7 @@ const IAT = ({ item }) => {
   // }
   // console.log(newWidth);
   return (
-    <HStack spacing="24px" >
+    <HStack spacing="24px">
       <Box
         w={newWidth}
         h="73px"
@@ -76,7 +76,7 @@ const IAT = ({ item }) => {
         bg={"#FFFAF2"}
         color={"#D7971B"}
         borderRadius={"5px"}
-        fontWeight={600}
+        fontWeight={500}
         fontSize={"12px"}
       >
         <Box

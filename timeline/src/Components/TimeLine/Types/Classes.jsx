@@ -69,11 +69,12 @@ const Classes = ({ item }) => {
         align={"flex-start"}
         p={"10px"}
         gap={"10px"}
-        bg={"#f2f2ff"}
+        bg={"#F2F2FF"}
         color={"#6F6CE5"}
         borderRadius={"5px"}
         fontSize={"12px"}
-        fontWeight={600}
+        fontStyle={"normal"}
+        fontWeight={500}
       >
         <Flex
           align={"flex-start"}
@@ -105,11 +106,11 @@ const Classes = ({ item }) => {
         <Box>
           <Text
             position={"absolute"}
-            w={"51px"}
+            w={"61px"}
             h="17px"
             left="38px"
             top="10px"
-            fontSize={"15px"}
+            fontSize={"14px"}
             lineHeight={"17px"}
           >
             Physics

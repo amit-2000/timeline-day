@@ -12,7 +12,6 @@ const Timelinehome = ({ currentsDaysEvent, typesSet }) => {
         overflowX="scroll"
         pos={"absolute"}
         w={1128}
-        scro
         h={609}
         left={137}
         top={112}

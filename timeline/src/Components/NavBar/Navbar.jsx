@@ -12,6 +12,7 @@ const Navbar = ({ handleClick }) => {
       left={15}
       backgroundColor={"#FFFFFF"}
       borderRadius={5}
+    
     >
       <Box
         pos={"absolute"}
@@ -21,7 +22,7 @@ const Navbar = ({ handleClick }) => {
         top={3}
         fontFamily={"inter"}
         fontStyle={"normal"}
-        fontWeight="500"
+        fontWeight={500}
         fontSize={24}
         color={"#733D47"}
       >

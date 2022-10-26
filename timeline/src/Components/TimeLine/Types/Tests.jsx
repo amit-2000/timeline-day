@@ -75,7 +75,7 @@ const Tests = ({ item }) => {
         bg={"#F6FFFE"}
         borderRadius={"5px"}
         color={"#19A392"}
-        fontWeight={600}
+        fontWeight={500}
         fontSize={"12px"}
       >
         <Box

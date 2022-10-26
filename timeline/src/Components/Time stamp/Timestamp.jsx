@@ -27,10 +27,16 @@ const Timestamp = ({ currentsDaysEvent }) => {
       ref={myRef}
       position="absolute"
       left={shour * 264 + 4 + smins * 4.32}
-      top={0}
+      top={-2}
     >
       <Stack height={"400px"} marginTop={"34px"}>
-        <Text color={"red"} marginLeft="-30px" width={"70px"} fontWeight={600}>
+        <Text
+          color={"red"}
+          marginLeft="-25px"
+          width={"70px"}
+          fontSize={"12px"}
+          fontWeight={500}
+        >
           {strTime}
         </Text>
         <Box
