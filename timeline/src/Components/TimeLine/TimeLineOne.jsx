@@ -1,5 +1,5 @@
 import React from "react";
-import { HStack, Box, Text, Divider, Stack } from "@chakra-ui/react";
+import { HStack, Box, Text, Divider} from "@chakra-ui/react";
 const TimeLineOne = ({ time }) => {
   var width = 264;
 
