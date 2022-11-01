@@ -23,38 +23,56 @@ const Timestamp = ({ currentsDaysEvent }) => {
   hours = hours < 10 ? "0" + hours : hours;
   var strTime = hours + ":" + minutes + " " + ampm;
   return (
-    <Box
-      ref={myRef}
-      position="absolute"
-      left={shour * 264 + 4 + smins * 4.32}
-      top={-2}
-    >
-      <Stack height={"400px"} marginTop={"34px"}>
-        <Text
-          color={"red"}
-          marginLeft="-25px"
-          width={"70px"}
-          fontSize={"12px"}
-          fontWeight={500}
-        >
-          {strTime}
-        </Text>
-        <Box
-          marginLeft="-30px"
-          position="absolute"
-          left={"-4px"}
-          bottom={"364px"}
-        >
+    <Box>
+      <Box
+        ref={myRef}
+        position="absolute"
+        left={shour * 264 + 4 + smins * 4.32}
+        top={-2}
+      >
+        <Stack height={"400px"} marginTop={"34px"}>
           <Text
             color={"red"}
-            background="red"
-            borderRadius={"50%"}
-            width="9px"
-            height={"9px"}
-          ></Text>
-        </Box>
-        <Divider orientation="vertical" borderColor={"red"} />
-      </Stack>
+            marginLeft="-25px"
+            width={"70px"}
+            fontSize={"12px"}
+            fontWeight={500}
+          >
+            {strTime}
+          </Text>
+          <Box
+            marginLeft="-30px"
+            position="absolute"
+            left={"-4px"}
+            bottom={"365px"}
+          >
+            <Text
+              color={"red"}
+              background="red"
+              borderRadius={"50%"}
+              width="9px"
+              height={"9px"}
+            ></Text>
+          </Box>
+          <Divider orientation="vertical" borderColor={"red"} />
+        </Stack>
+      </Box>{" "}
+      <Box
+        // ref={myRef}
+        position="absolute"
+        left={shour * 264 + 4 + smins * 4.32}
+        top={-2}
+      >
+        <Stack height={"530px"} marginTop={"60px"}>
+          <Box
+            marginLeft="-30px"
+            position="absolute"
+            left={"-4px"}
+            bottom={"305px"}
+          ></Box>
+          <Divider orientation="vertical" borderColor={"red"} />
+        </Stack>
+      </Box>
     </Box>
   );
 };
