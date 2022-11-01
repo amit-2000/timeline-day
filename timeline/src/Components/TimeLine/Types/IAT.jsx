@@ -122,8 +122,10 @@ const IAT = ({ item }) => {
             borderRadius={"50%"}
             fontSize={"15px"}
             lineHeight={"17px"}
-          >
+            >
+            {/* {item.id} */}
             Upload Documents
+            
             {/* {item.title} */}
           </Text>
           <Text

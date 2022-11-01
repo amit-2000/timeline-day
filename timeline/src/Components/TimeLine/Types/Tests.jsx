@@ -118,6 +118,8 @@ const Tests = ({ item }) => {
             lineHeight={"17px"}
           >
             {item.title}
+            {/* {item.id} */}
+
             {/* {item.title} */}
           </Text>
 

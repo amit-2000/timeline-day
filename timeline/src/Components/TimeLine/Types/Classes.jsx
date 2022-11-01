@@ -114,6 +114,7 @@ const Classes = ({ item }) => {
             lineHeight={"17px"}
           >
             Physics
+            {/* {item.id} */}
             {/* {item.title} */}
           </Text>
           <Text

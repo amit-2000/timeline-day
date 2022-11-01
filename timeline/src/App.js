@@ -4,9 +4,8 @@ import { ChakraProvider, Box } from "@chakra-ui/react";
 import Navbar from "./Components/NavBar/Navbar";
 import Sidebar from "./Components/SideBar/Sidebar";
 import Timelinehome from "./Components/TimeLine/TimelineHome";
-// import { data } from "./utils";
-const App = ({ data }) => {
-  console.log(data);
+import { data } from "./utils";
+const App = ({ dataApi }) => {
   const datesRef = useRef();
   const [currentsDaysEvent, setCurrentsDaysEvent] = useState([]);
   const [currentDate, setCurrentDate] = useState([]);

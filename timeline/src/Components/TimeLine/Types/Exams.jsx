@@ -115,7 +115,9 @@ const Exams = ({ item }) => {
             fontSize={"15px"}
             lineHeight={"17px"}
           >
+            {/* {item.id} */}
             Physics Examination
+            
             {/* {item.title} */}
           </Text>
           <Text
@@ -161,7 +163,6 @@ const Exams = ({ item }) => {
           <Text
             width={"41px"}
             h={"12px"}
-        
             lineHeight={"12px"}
             // color={"#6F6CE5"}
             flex={"none"}
