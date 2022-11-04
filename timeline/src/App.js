@@ -4,16 +4,19 @@ import { ChakraProvider, Box } from "@chakra-ui/react";
 import Navbar from "./Components/NavBar/Navbar";
 import Sidebar from "./Components/SideBar/Sidebar";
 import Timelinehome from "./Components/TimeLine/TimelineHome";
+import { useDisclosure } from "@chakra-ui/react";
+import Popup from "./Components/popup/Popup";
 import { data } from "./utils";
 const App = ({ dataApi }) => {
   const datesRef = useRef();
+  const { isOpen, onOpen } = useDisclosure();
+ const finalRef = React.useRef();
   const [currentsDaysEvent, setCurrentsDaysEvent] = useState([]);
   const [currentDate, setCurrentDate] = useState([]);
   let [dates, setDates] = useState([]);
   let [i, setI] = useState(0);
   const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  // const [data, setData] = useState([]);
-  // const dataRef = useRef();
+
 
   useEffect(() => {
     // Get types of item
@@ -88,6 +91,12 @@ const App = ({ dataApi }) => {
   return (
     <ChakraProvider>
       <Box>
+        <Popup
+          isOpen={isOpen}
+          onOpen={onOpen}
+          onClose={onOpen}
+          finalRef={finalRef}
+        />
         <Navbar handleClick={handleClick} />
         <Sidebar dateList={dates} currentDate={currentDate} />
         <Timelinehome
