@@ -11,9 +11,9 @@ const Timelinehome = ({ currentsDaysEvent, typesSet }) => {
       <Box
         overflowX="scroll"
         pos={"absolute"}
-        w={1128}
+        w={1131}
         h={609}
-        left={137}
+        left={130}
         top={112}
         backgroundColor={"#FFFFFF"}
         borderRadius={5}

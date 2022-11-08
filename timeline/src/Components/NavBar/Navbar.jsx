@@ -7,9 +7,9 @@ const Navbar = ({ handleClick }) => {
       pos={"absolute"}
       width={1248}
       h={"60px"}
-      top={47}
+      top={49}
       marginLeft={"5px"}
-      left={15}
+      left={'10px'}
       backgroundColor={"#FFFFFF"}
       borderRadius={5}
     

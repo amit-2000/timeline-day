@@ -9,7 +9,7 @@ const Sidebar = ({ dateList, currentDate }) => {
       position={"absolute"}
       w={"112px"}
       h={"609px"}
-      left={"20px"}
+      left={"14px"}
       top={"112px"}
       backgroundColor="#FFFFFF"
       borderRadius={5}

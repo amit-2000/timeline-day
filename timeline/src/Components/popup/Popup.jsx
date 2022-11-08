@@ -6,19 +6,21 @@ import {
   ModalHeader,
   ModalFooter,
   ModalBody,
-  ModalCloseButton,
+  // ModalCloseButton,
 } from "@chakra-ui/react";
 import { Button, Text } from "@chakra-ui/react";
 import { useDisclosure } from "@chakra-ui/react";
 
 function Popup() {
-  const date = new Date();
-  const showTime = date.getHours();
-  const depd = showTime > 12 ? true : false;
+  // const date = new Date();
+  // const showTime = date.getHours();
   useEffect(() => {
-    onOpen();
-    setOverlay(<OverlayOne />);
-  }, [null]);
+    setTimeout(() => {
+      onOpen();
+      setOverlay(<OverlayOne />);
+    }, 2000);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   const OverlayOne = () => (
     <ModalOverlay
       bg="blackAlpha.300"
@@ -26,14 +28,14 @@ function Popup() {
     />
   );
 
-  const OverlayTwo = () => (
-    <ModalOverlay
-      bg="none"
-      backdropFilter="auto"
-      backdropInvert="80%"
-      backdropBlur="2px"
-    />
-  );
+  // const OverlayTwo = () => (
+  //   <ModalOverlay
+  //     bg="none"
+  //     backdropFilter="auto"
+  //     backdropInvert="80%"
+  //     backdropBlur="2px"
+  //   />
+  // );
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [overlay, setOverlay] = React.useState(<OverlayOne />);
@@ -43,11 +45,11 @@ function Popup() {
       <Modal isCentered isOpen={isOpen} onClose={onClose}>
         {overlay}
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
-          <ModalCloseButton />
+          <ModalHeader>Note...</ModalHeader>
+          {/* <ModalCloseButton /> */}
           <ModalBody>
-            <Text fontSize="3xl" as="b">
-              Custom backdrop filters!
+            <Text fontSize="xl" as="b">
+              Don't Forget To Scroll Right..!!
             </Text>
           </ModalBody>
           <ModalFooter>
